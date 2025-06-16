@@ -8,6 +8,14 @@ char* filter_array(const char *str, const FilterFn filter);
 
 void print_string(const char *str);
 
+int isSpecialChar(int c) {
+    if (!isalnum(c) && !isspace(c)) {
+        return 1; // Found a special character
+    }
+    return 0; // No special characters found
+}
+
+
 int main(void) {
     // the string we want to check
     const char *my_str = "mike 123 ***";
@@ -16,17 +24,17 @@ int main(void) {
     // find letters
     const char *letters = filter_array(my_str, isalpha);
     printf("letters => [%s]\n", letters);
+    free(letters);
 
     // find numbers
     const char *numbers = filter_array(my_str, isdigit);
     printf("numbers => [%s]\n", numbers);
+    free(numbers);
 
     // find special characters, ex: "!*$"
-
-    // free memory
-    // TODO: warning: passing 'const char *' to parameter of type 'void *' discards qualifiers
-    free(letters);
-    free(numbers);
+    const char *special_chars = filter_array(my_str, isSpecialChar);
+    printf("special chars => [%s]\n", special_chars);
+    free(special_chars);
 
     return EXIT_SUCCESS;
 }
