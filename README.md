@@ -12,16 +12,18 @@ Each subfolder contains a specific exercise to explore a concept.
 
 ## characters
 
-`characters/main.c` — extracts letters, numbers & special chars from a string
+Code to extracts letters, numbers & special chars from an input string.
 
-This one is interesting because C requires allocating & release memory manually.
+This exercise is interesting because C requires allocating & release memory manually.
 
-Unlike Java, JS, or Python you are responsible 🥲
+`characters/charsv1.c` — works, but duplicates looping code
+`characters/charsv2.c` — improves on v1 by using a function pointer to avoid duplication
+
 
 Build:
 
 ```shell
-cc main.c -o main
+cc charsv1.c -o charsv1
 ./main
 ```
 
