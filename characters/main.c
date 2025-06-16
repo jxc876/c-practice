@@ -6,22 +6,26 @@
 void print_string(const char *str);
 int get_number_count(const char *str);
 char* get_numbers(const char *str);
+char* get_letters(const char *str);
 
 int main(void) {
-    // a string we want to check
+    // the string we want to check
     const char *my_str = "mike 123 ***";
     printf("input string => [%s]\n", my_str);
+
+    // find letters
+    const char *letters = get_letters(my_str);
+    printf("letters => [%s]\n", letters);
 
     // show how many numbers we found
     const char *numbers = get_numbers(my_str);
     printf("numbers => [%s]\n", numbers);
 
-    // find letters
-
     // find special characters, ex: "!*$"
 
     // free memory
     // TODO: warning: passing 'const char *' to parameter of type 'void *' discards qualifiers
+    free(letters);
     free(numbers);
 
     return EXIT_SUCCESS;
@@ -63,6 +67,23 @@ char* get_numbers(const char *str) {
     }
     digits[j] = '\0'; // Null-terminate the result string
     return digits;
+}
+
+char* get_letters(const char *str) {
+    // requires a dynamic array to hold the letters
+    const unsigned long length = strlen(str);
+    char *letters = malloc(length + 1); // Max possible size + null terminator
+    if (!letters) return NULL; // Check for malloc failure
+
+    // find the letters
+    int j = 0; // index for digits array
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isalpha(str[i])) {
+            letters[j++] = str[i];
+        }
+    }
+    letters[j] = '\0'; // Null-terminate the result string
+    return letters;
 }
 
 /**
