@@ -2,6 +2,10 @@
 
 A simple repo to practice working with the fundamentals of C and it's toolchain.
 
+I'm using CLion as my editor, but would like to explore XCode as well.
+* https://www.jetbrains.com/clion
+* https://developer.apple.com/xcode/
+
 # Folders
 
 Each subfolder contains a specific exercise to explore a concept.
