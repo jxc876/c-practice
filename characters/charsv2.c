@@ -15,11 +15,19 @@ int isSpecialChar(int c) {
     return 0; // No special characters found
 }
 
-
+/**
+ * Sample Run
+ * input string => [mike 123 ***]
+ * -------
+ * letters => [mike]
+ * numbers => [123]
+ * special chars => [***]
+ */
 int main(void) {
     // the string we want to check
     const char *my_str = "mike 123 ***";
     printf("input string => [%s]\n", my_str);
+    printf("-------\n");
 
     // find letters
     const char *letters = filter_array(my_str, isalpha);
