@@ -3,10 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+// declarations
 typedef int (FilterFn(int c));
 char* filter_array(const char *str, const FilterFn filter);
 int isSpecialChar(int c);
 void print_string(const char *str);
+
 
 /**
  * Sample Run
