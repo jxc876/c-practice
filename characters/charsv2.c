@@ -54,7 +54,7 @@ int main(void) {
  * @return A string containing matched characters
  */
 char* filter_array(const char *str, const FilterFn filter) {
-    // requires a dynamic array to matches
+    // allocates a dynamic array to hold matches
     const unsigned long length = strlen(str);
     char *matches = malloc(length + 1); // Max possible size + null terminator
     if (!matches) return NULL; // Check for malloc failure

@@ -53,7 +53,7 @@ int get_number_count(const char *str) {
  * @return A string with the numbers, ex: "123"
  */
 char* get_numbers(const char *str) {
-    // requires a dynamic array to hold the numbers
+    // allocates a dynamic array to hold matches
     const unsigned long length = strlen(str);
     char *digits = malloc(length + 1); // Max possible size + null terminator
     if (!digits) return NULL; // Check for malloc failure
