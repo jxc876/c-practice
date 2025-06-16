@@ -5,15 +5,8 @@
 
 typedef int (FilterFn(int c));
 char* filter_array(const char *str, const FilterFn filter);
-
+int isSpecialChar(int c);
 void print_string(const char *str);
-
-int isSpecialChar(int c) {
-    if (!isalnum(c) && !isspace(c)) {
-        return 1; // Found a special character
-    }
-    return 0; // No special characters found
-}
 
 /**
  * Sample Run
@@ -45,6 +38,13 @@ int main(void) {
     free(special_chars);
 
     return EXIT_SUCCESS;
+}
+
+int isSpecialChar(int c) {
+    if (!isalnum(c) && !isspace(c)) {
+        return 1; // Found a special character
+    }
+    return 0; // No special characters found
 }
 
 /**
