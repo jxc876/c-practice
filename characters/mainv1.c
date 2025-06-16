@@ -17,7 +17,7 @@ int main(void) {
     const char *letters = get_letters(my_str);
     printf("letters => [%s]\n", letters);
 
-    // show how many numbers we found
+    // find numbers
     const char *numbers = get_numbers(my_str);
     printf("numbers => [%s]\n", numbers);
 
