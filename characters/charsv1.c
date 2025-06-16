@@ -17,7 +17,7 @@ char* get_special_chars(const char *str);
  * -------
  * letters => [mike]
  * numbers => [123]
- * special chars => [***]
+ * special => [***]
  */
 int main(void) {
     // the string we want to check
@@ -37,7 +37,7 @@ int main(void) {
 
     // find special characters, ex: "!*$"
     const char *special_chars = get_special_chars(my_str);
-    printf("special chars => [%s]\n", special_chars);
+    printf("special => [%s]\n", special_chars);
     free(special_chars);
 
     return EXIT_SUCCESS;
