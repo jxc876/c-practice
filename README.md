@@ -30,3 +30,16 @@ cc charsv1.c -o charsv1
 Practicing using header files — Under Construction 🚧
 
 Splits a function into interface (`greeting.h`) & definition (`greting.c`)
+
+```shell
+# compile object files
+gcc -c greeting.c
+gcc -c greeting-demo.c
+
+# final binary
+gcc -o greeting-demo greeting.o greeting-demo
+
+# execute
+./greeting-demo 
+Hello, World!
+```
