@@ -2,19 +2,25 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 
-# Output binary name
+# Output
 TARGET = greeting-demo
+BINDIR = bin
+OUTFILE = $(BINDIR)/$(TARGET)
 
 # Source and object files
 SRCS = greeting-demo.c greeting.c
 OBJS = $(SRCS:.c=.o)
 
 # Default rule
-all: $(TARGET)
+all: $(OUTFILE)
 
 # Link object files into binary
-$(TARGET): $(OBJS)
+$(OUTFILE): $(OBJS) | $(BINDIR)
 	$(CC) $(CFLAGS) -o $@ $^
+
+# Ensure bin/ directory exists
+$(BINDIR):
+	mkdir -p $@
 
 # Compile .c to .o
 %.o: %.c
@@ -22,4 +28,4 @@ $(TARGET): $(OBJS)
 
 # Clean rule
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f $(OBJS) $(OUTFILE)

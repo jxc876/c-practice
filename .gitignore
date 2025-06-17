@@ -1,0 +1,7 @@
+# Object files
+*.o
+
+# Build artifacts
+/build/
+/bin/
+/dist/
