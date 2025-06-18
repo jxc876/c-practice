@@ -32,14 +32,19 @@ Practicing using header files — Under Construction 🚧
 Splits a function into interface (`greeting.h`) & definition (`greting.c`)
 
 ```shell
+cd headers
+
 # compile object files
 gcc -c greeting.c
-gcc -c greeting-demo.c
+gcc -c say_hello.c
 
 # final binary
-gcc -o greeting-demo greeting.o greeting-demo
+gcc -o bin/say_hello greeting.o say_hello.o
 
 # execute
-./greeting-demo 
+./bin/say_hello
 Hello, World!
+
+# clean up
+rm *.o
 ```

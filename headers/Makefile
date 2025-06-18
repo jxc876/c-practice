@@ -3,12 +3,12 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 
 # Output
-TARGET = greeting-demo
+TARGET = say_hello
 BINDIR = bin
 OUTFILE = $(BINDIR)/$(TARGET)
 
 # Source and object files
-SRCS = greeting-demo.c greeting.c
+SRCS = say_hello.c greeting.c
 OBJS = $(SRCS:.c=.o)
 
 # Default rule
