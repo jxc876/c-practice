@@ -2,10 +2,6 @@
 
 A simple repo to practice working with the fundamentals of C.
 
-For my editor I'm using CLion, but hoping to explore XCode as well.
-* https://www.jetbrains.com/clion
-* https://developer.apple.com/xcode
-
 Each subfolder contains a specific exercise to explore a concept.
 
 You can build the programs using CMake, ex:
