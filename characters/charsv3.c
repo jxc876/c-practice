@@ -50,11 +50,16 @@ Result *analyze_string(const char *str) {
         return NULL;
     }
 
+    // initializer pointers
+    result->letters = NULL;
+    result->numbers = NULL;
+    result->special = NULL;
+
     // Allocate memory for each string
     // add 1 extra for '\0'
-    result->letters = malloc(strlen(str) + 1); // "abc"
-    result->numbers = malloc(strlen(str) + 1); // "123"
-    result->special = malloc(strlen(str) + 1); // "!@#"
+    result->letters = malloc(strlen(str) + 1); // ex: "abc"
+    result->numbers = malloc(strlen(str) + 1); // ex: "123"
+    result->special = malloc(strlen(str) + 1); // ex: "!@#"
 
     if (!result->letters || !result->numbers || !result->special) {
         // Handle allocation failure
@@ -69,29 +74,29 @@ Result *analyze_string(const char *str) {
     int num_idx = 0;
     int special_idx = 0;
 
-    // loop array
+    // loop input string
     for (int i = 0; str[i] != '\0'; i++) {
 
-        // add to letters array
+        // append to letters array
         if (isalpha(str[i])) {
             result->letters[letter_idx] = str[i];
             letter_idx++;
         }
 
-        // add to numbers array
+        // append to numbers array
         if (isdigit(str[i])) {
             result->numbers[num_idx] = str[i];
             num_idx++;
         }
 
-        // add to special char array
+        // append to special char array
         if (!isalnum(str[i]) && !isspace(str[i])) {
             result->special[special_idx] = str[i];
             special_idx++;
         }
     }
 
-    // Add null-terminators
+    // null-terminate strings
     result->letters[letter_idx] = '\0';
     result->numbers[num_idx] = '\0';
     result->special[special_idx] = '\0';
