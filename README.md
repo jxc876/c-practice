@@ -32,3 +32,7 @@ Practicing using header files
 
 Splits a function into interface (`greeting.h`) & definition (`greting.c`)
 
+## fn_pointers
+
+Small program to show how function pointers work.
+
