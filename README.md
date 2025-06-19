@@ -4,7 +4,7 @@ A simple repo to practice working with the fundamentals of C.
 
 Each subfolder contains a specific exercise to explore a concept.
 
-You can build the programs using CMake, ex:
+You can compile the examples using CMake, ex:
 
 ```shell
 mkdir build
