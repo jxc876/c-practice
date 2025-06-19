@@ -8,6 +8,7 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(charsv1 characters/charsv1.c)
 add_executable(charsv2 characters/charsv2.c)
+add_executable(charsv3 characters/charsv3.c)
 
 add_executable(say_hello
         headers/greeting.c
