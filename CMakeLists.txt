@@ -15,14 +15,21 @@ include_directories(include)
 add_executable(charsv1 src/characters/charsv1.c)
 add_executable(charsv2 src/characters/charsv2.c)
 add_executable(charsv3 src/characters/charsv3.c)
+# charsv4
+add_executable(charsv4
+        src/characters/charsv4.c
+        src/characters/v4lib.c)
 
+# say_hello
 add_executable(say_hello
         src/headers/greeting.c
         src/headers/say_hello.c)
 
+# fn_pointers
 add_executable(fn_pointers
         src/fn_pointers/fn_pointers.c)
 
-add_executable(charsv4
-        src/characters/charsv4.c
-        src/characters/v4lib.c)
+# nba_sim
+add_executable(nba_sim src/nba/nba_sim.c
+        include/player.h
+        src/nba/player.c)
