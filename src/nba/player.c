@@ -15,6 +15,10 @@ static char *lastNames[NUM_NAMES] = {
     "Jackson", "Williams", "White", "Ellis", "Carter"
 };
 
+static int rand_skill() {
+    return 50 + rand() % 50;
+}
+
 NBAPlayer generate_player() {
     NBAPlayer p;
 
@@ -30,12 +34,12 @@ NBAPlayer generate_player() {
     p.height_inches = 72 + rand() % 17;
     p.weight_lbs = 180 + rand() % 71;
 
-    // attributes
-    p.shooting = rand() % 100;
-    p.passing = rand() % 100;
-    p.defense = rand() % 100;
-    p.athleticism = rand() % 100;
-    p.basketball_iq = rand() % 100;
+    // skills
+    p.shooting = rand_skill();
+    p.passing = rand_skill();
+    p.defense = rand_skill();
+    p.athleticism = rand_skill();
+    p.basketball_iq = rand_skill();
 
     return p;
 }

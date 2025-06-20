@@ -9,7 +9,7 @@ typedef struct {
     int height_inches;
     int weight_lbs;
 
-    // attributes
+    // skill attributes
     int shooting;
     int passing;
     int defense;
