@@ -3,18 +3,18 @@
 
 typedef struct {
     // personal stats
-    char firstname[20];
-    char lastname[20];
+    char first_name[20];
+    char last_name[20];
     int age;
-    int heightInches;
-    int weightLbs;
+    int height_inches;
+    int weight_lbs;
 
     // attributes
     int shooting;
     int passing;
     int defense;
     int athleticism;
-    int basketballIQ;
+    int basketball_iq;
 } NBAPlayer;
 
 NBAPlayer generatePlayer();
