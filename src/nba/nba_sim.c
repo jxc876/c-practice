@@ -13,8 +13,8 @@ int main() {
     NBAPlayer players[NUM_PLAYERS];
 
     for (int i = 0; i < NUM_PLAYERS; i++) {
-        players[i] = generatePlayer();
-        printPlayer(players[i]);
+        players[i] = generate_player();
+        print_player(players[i]);
     }
     return EXIT_SUCCESS;
 }

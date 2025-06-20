@@ -15,7 +15,7 @@ static char *lastNames[NUM_NAMES] = {
     "Jackson", "Williams", "White", "Ellis", "Carter"
 };
 
-NBAPlayer generatePlayer() {
+NBAPlayer generate_player() {
     NBAPlayer p;
 
     // name
@@ -40,7 +40,7 @@ NBAPlayer generatePlayer() {
     return p;
 }
 
-void printPlayer(NBAPlayer p) {
+void print_player(NBAPlayer p) {
     printf("Name: %s %s \n", p.first_name, p.last_name);
     printf("Age: %d \n", p.age);
     printf("Height: %d ft %d in \n", p.height_inches / 12, p.height_inches % 12);

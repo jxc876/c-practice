@@ -17,8 +17,8 @@ typedef struct {
     int basketball_iq;
 } NBAPlayer;
 
-NBAPlayer generatePlayer();
+NBAPlayer generate_player();
 
-void printPlayer(NBAPlayer p);
+void print_player(NBAPlayer p);
 
 #endif //PLAYER_H
